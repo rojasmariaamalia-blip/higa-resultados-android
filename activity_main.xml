@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="#F3F0F8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/dniEdit"
+            android:hint="DNI"
+            android:inputType="number"
+            android:maxLength="9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/fromEdit"
+                android:hint="Desde dd/mm/aaaa"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/toEdit"
+                android:hint="Hasta dd/mm/aaaa"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/prepareButton"
+            android:text="Seleccionar D.N.I. y completar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:text="Abrí HIGA y luego prepará la consulta."
+        android:padding="8dp"
+        android:textSize="13sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
